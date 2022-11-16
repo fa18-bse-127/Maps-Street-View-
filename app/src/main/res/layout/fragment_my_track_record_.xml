@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewDesign.MyTrackRecord_Frag">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+
+        <fragment
+            android:id="@+id/mapFragment_myTrackRecordFrag"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            map:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.0"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="1.0"
+            tools:context=".Activities.MyTrackRecord" />
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Time"/>
+
+                <TextView
+                    android:id="@+id/timeTv_myTrackRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Speed"/>
+
+                <TextView
+                    android:id="@+id/speedTv_myTrackRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:text="Travelled"/>
+
+                <TextView
+                    android:id="@+id/distanceTv_myTrackRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/convertButton_mytracksfrag"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            map:layout_constraintBottom_toBottomOf="@+id/mapFragment_myTrackRecordFrag"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.96"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="@+id/mapFragment_myTrackRecordFrag"
+            map:layout_constraintVertical_bias="0.089999974"
+            map:srcCompat="@drawable/mapchange" />
+
+        <ImageView
+            android:id="@+id/zoomIn_mytrackfrag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            map:layout_constraintBottom_toBottomOf="@+id/mapFragment_myTrackRecordFrag"
+            map:layout_constraintEnd_toEndOf="@+id/convertButton_mytracksfrag"
+            map:layout_constraintStart_toStartOf="@+id/convertButton_mytracksfrag"
+            map:layout_constraintTop_toBottomOf="@+id/convertButton_mytracksfrag"
+            map:layout_constraintVertical_bias="0.84000003"
+            map:srcCompat="@drawable/zoomin" />
+
+        <ImageView
+            android:id="@+id/zoomOut_mytrackfrag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            map:layout_constraintEnd_toEndOf="@+id/zoomIn_mytrackfrag"
+            map:layout_constraintStart_toStartOf="@+id/zoomIn_mytrackfrag"
+            map:layout_constraintTop_toBottomOf="@+id/zoomIn_mytrackfrag"
+            map:srcCompat="@drawable/zoomout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

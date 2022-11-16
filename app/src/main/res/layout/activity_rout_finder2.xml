@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbToolbarRouteFinder"
+        android:layout_width="0dp" android:layout_height="?actionBarSize"
+        android:background="@color/text_bg_color"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:titleTextColor="@color/white" />
+
+    <fragment
+        android:id="@+id/mapRoutFinderTwo"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        map:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/searchView_RouteFinder2"
+        map:layout_constraintVertical_bias="0.0"
+        tools:context=".NewDesign.RoutFinder2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="1.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="1.0">
+
+
+        <Button
+            android:id="@+id/pickLocationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick location"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.498"
+            map:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/bg_text_view2"
+            android:backgroundTint="@color/text_bg_color"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="0.882" />
+
+        <TextView
+            android:id="@+id/addressHeadlineTxt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            map:layout_constraintBottom_toTopOf="@+id/pickLocationBtn"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.045"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            map:layout_constraintBottom_toTopOf="@+id/pickLocationBtn"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/addressHeadlineTxt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.498"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.47000003"
+        map:srcCompat="@drawable/map_pointer" />
+
+    <ImageView
+        android:id="@+id/converButton_Route2"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.958"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.24000001"
+        map:srcCompat="@drawable/mapchange" />
+
+    <ImageView
+        android:id="@+id/zoomin_routFinder2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        map:layout_constraintBottom_toBottomOf="@+id/mapRoutFinderTwo"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.981"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/converButton_Route2"
+        map:layout_constraintVertical_bias="0.823"
+        map:srcCompat="@drawable/zoomin" />
+
+    <ImageView
+        android:id="@+id/zoomOut_routeFinder2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        map:layout_constraintEnd_toEndOf="@+id/zoomin_routFinder2"
+        map:layout_constraintStart_toStartOf="@+id/zoomin_routFinder2"
+        map:layout_constraintTop_toBottomOf="@+id/zoomin_routFinder2"
+        map:srcCompat="@drawable/zoomout" />
+
+    <SearchView
+        android:id="@+id/searchView_RouteFinder2"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/text_bg_color"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@null"
+        android:queryHint="Search Places"
+        android:searchHintIcon="@color/white"
+        android:searchIcon="@drawable/ic_baseline_search_24"
+        android:theme="@style/AppTheme.SearchView"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/tbToolbarRouteFinder" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_RouteFinder2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/searchView_RouteFinder2" />
+
+    <ImageView
+        android:id="@+id/trafficBtn_routeFinder2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toBottomOf="@+id/zoomOut_routeFinder2"
+        map:layout_constraintEnd_toStartOf="@+id/zoomOut_routeFinder2"
+        map:layout_constraintHorizontal_bias="0.06"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="@+id/zoomin_routFinder2"
+        map:srcCompat="@drawable/trafficimg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

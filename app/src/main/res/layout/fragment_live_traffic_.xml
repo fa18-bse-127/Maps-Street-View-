@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewDesign.LiveTraffic_Frag">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:map="http://schemas.android.com/apk/res-auto">
+
+        <fragment
+            android:id="@+id/liveTrafficMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Activities.LiveTraffic"
+            tools:layout_editor_absoluteX="-196dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <ImageView
+            android:id="@+id/converButton_LiveTraffic"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.958"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="0.093"
+            map:srcCompat="@drawable/mapchange" />
+
+        <ImageView
+            android:id="@+id/trafficBtn_liveTraffic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.041"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="0.808"
+            map:srcCompat="@drawable/trafficimg" />
+
+        <ImageView
+            android:id="@+id/streetViewBtn_liveTraffic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="@+id/trafficBtn_liveTraffic"
+            map:layout_constraintHorizontal_bias="0.0"
+            map:layout_constraintStart_toStartOf="@+id/trafficBtn_liveTraffic"
+            map:layout_constraintTop_toBottomOf="@+id/trafficBtn_liveTraffic"
+            map:layout_constraintVertical_bias="0.06999999"
+            map:srcCompat="@drawable/boyimg" />
+
+        <ImageView
+            android:id="@+id/dimensionBtn_liveTraffic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="@+id/streetViewBtn_liveTraffic"
+            map:layout_constraintHorizontal_bias="0.0"
+            map:layout_constraintStart_toStartOf="@+id/streetViewBtn_liveTraffic"
+            map:layout_constraintTop_toBottomOf="@+id/streetViewBtn_liveTraffic"
+            map:layout_constraintVertical_bias="0.18"
+            map:srcCompat="@drawable/_d_btn" />
+
+        <ImageView
+            android:id="@+id/zoomIn_liveTraffic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintHorizontal_bias="0.958"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toBottomOf="@+id/converButton_LiveTraffic"
+            map:layout_constraintVertical_bias="0.826"
+            map:srcCompat="@drawable/zoomin" />
+
+        <ImageView
+            android:id="@+id/zoomOut_liveTraffic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="@+id/zoomIn_liveTraffic"
+            map:layout_constraintHorizontal_bias="1.0"
+            map:layout_constraintStart_toStartOf="@+id/zoomIn_liveTraffic"
+            map:layout_constraintTop_toBottomOf="@+id/zoomIn_liveTraffic"
+            map:layout_constraintVertical_bias="0.00999999"
+            map:srcCompat="@drawable/zoomout" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            map:layout_constraintVertical_bias="0.48000002"
+            map:srcCompat="@drawable/map_pointer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

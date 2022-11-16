@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NewDesign.LiveSatelliteView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <fragment
+                android:id="@+id/mapFragment_LiveSatelliteView"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@+id/mapStreetViewBtn"
+                app:layout_constraintBottom_toTopOf="@+id/addressTxtView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchView_LiveSatelliteView"
+                tools:context=".Activities.MapsActivity"
+                tools:ignore="NotSibling">
+
+
+            </fragment>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addressTxtView"
+                android:minHeight="80dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:background="@color/text_bg_color"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="NotSibling" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:minHeight="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_textview_2"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.157"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <Button
+                        android:id="@+id/mapStreetViewBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:backgroundTint="@color/text_bg_color"
+                        android:text="Street View"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.946"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.687" />
+
+                    <TextView
+                        android:id="@+id/addressTxtView1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text=""
+                        android:padding="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/mapStreetViewBtn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.45"
+                app:srcCompat="@drawable/map_pointer" />
+
+            <ImageView
+                android:id="@+id/convertMap"
+                android:layout_width="35dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.958"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.17000002"
+                app:srcCompat="@drawable/mapchange" />
+
+            <ImageView
+                android:id="@+id/zoomIn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.947"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.79"
+                app:srcCompat="@drawable/zoomin" />
+
+            <ImageView
+                android:id="@+id/zoom_out"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/zoomIn"
+                app:layout_constraintStart_toStartOf="@+id/zoomIn"
+                app:layout_constraintTop_toBottomOf="@+id/zoomIn"
+                app:srcCompat="@drawable/zoomout" />
+
+            <SearchView
+                android:id="@+id/searchView_LiveSatelliteView"
+                android:layout_width="0dp"
+                android:layout_height="?actionBarSize"
+                android:queryHint="Search Places"
+                android:iconifiedByDefault="false"
+                android:theme="@style/AppTheme.SearchView"
+                android:searchIcon="@drawable/ic_baseline_search_24"
+                android:background="@color/text_bg_color"
+                android:queryBackground="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_liveSatelliteView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.307"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchView_LiveSatelliteView" />
+
+            <ImageView
+                android:id="@+id/trafficBtn_LiveSatelliteView"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/trafficimg"
+                app:layout_constraintBottom_toBottomOf="@+id/zoom_out"
+                app:layout_constraintEnd_toStartOf="@+id/zoom_out"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/zoomIn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
